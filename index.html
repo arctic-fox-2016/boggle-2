@@ -3,9 +3,52 @@
   <head>
     <title>Boggle Game</title>
     <link media="screen" rel="stylesheet" type="text/css" href="boggle.css">
-    <script type="text/javascript" src="boggle.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Indie+Flower|Orbitron|Poiret+One" rel="stylesheet">
     <script type="text/javascript" src="jquery.min.js"></script>
   </head>
-  <h1>let's create your boggle game</h1>
   <body>
+    <h1>let's create your boggle game</h1>
+    <div id="hasil">
+      <center>
+      <label>Words</label><br>
+      <textarea type="" rows="12" cols="30"></textarea>
+      <center>
+    </div>
+    <div class="tengah">
+      <label>Size</label>
+      <input type="text" id="board-width" value="4" disabled>
+      <label>X</label>
+      <input type="text" id="board-height" value="4" disabled><br>
+      <input type="button" value="Shake" id="shake">
+      <input type="button" value="Solve" id="solve">
+      <table class="warna">
+        <tr>
+          <td id="1"></td>
+          <td id="2"></td>
+          <td id="3"></td>
+          <td id="4"></td>
+        </tr>
+        <tr>
+          <td id="5"></td>
+          <td id="6"></td>
+          <td id="7"></td>
+          <td id="8"></td>
+        </tr>
+        <tr>
+          <td id="9"></td>
+          <td id="10"></td>
+          <td id="11"></td>
+          <td id="12"></td>
+        </tr>
+        <tr>
+          <td id="13"></td>
+          <td id="14"></td>
+          <td id="15"></td>
+          <td id="16"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script type="text/javascript" src="boggle.js"></script>
+  </body>
 </html>
