@@ -1,1 +1,18 @@
 /*write your css here*/
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    padding: 20px;
+}
+
+button{
+      padding: 20px;
+}
