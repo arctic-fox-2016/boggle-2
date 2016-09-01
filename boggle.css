@@ -1,1 +1,33 @@
 /*write your css here*/
+/*write your css here*/
+#papan{
+  background: #3E6524;
+  width: 50%;
+}
+
+.kotak{
+  background:#577941;
+  width: 10%;
+  height:40px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.button {
+    background-color: #99B785;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    float: left;
+}
+
+.clearfix {
+    display: flex;
+    align-items: center;
+}
