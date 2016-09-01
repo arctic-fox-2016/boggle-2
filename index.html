@@ -6,6 +6,46 @@
     <script type="text/javascript" src="boggle.js"></script>
     <script type="text/javascript" src="jquery.min.js"></script>
   </head>
-  <h1>let's create your boggle game</h1>
   <body>
+    <h1>Boggle</h1>
+    <div class="boggle">
+      <label>Size:</label>
+      <input type="text" name="height" value="4">
+      <label>X</label>
+      <input type="text" name="width" value="4">
+      <button class="refresh">Refresh</button>
+      <button class="solve">Refresh</button>
+      <table class="boggle-board"></table>
+    </div>
+    <p></p>
 </html>
+
+<script>
+  $(document).ready(function() {
+    function newGame() {
+      var height = $("input:text[name=height]").val();
+      var width = $("input:text[name=width]").val();
+      var temp = "";
+      var board = [];
+
+      var boggle = new BoggleBoard(height, width);
+      board = boggle.shake();
+
+      for (var h = 0; h < height; h++) {
+        temp += "<tr id='" + h + "'>";
+        for (var w = 0; w < width; w++) {
+          temp += "<td id='" + h + "-" + w + "'>" + board[h][w] + "</td>";
+        }
+        temp += "</tr>";
+      }
+      $(".boggle-board").html(temp);
+    }
+
+    newGame();
+
+    $(".refresh").click(function() {
+      newGame();
+    });
+
+  });
+</script>

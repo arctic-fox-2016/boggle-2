@@ -1,1 +1,30 @@
 /*write your css here*/
+
+h1, h2, h3, h4, h5, h6, p, b, label, i, button {
+  font-family: sans-serif;
+}
+
+.boggle {
+  display: inline-block;
+  background-color: #CCCCCC;
+  padding: 25px;
+}
+
+label, input, button {
+  font-size: 16px;
+}
+
+.boggle-board {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boggle-board td {
+  font-size: 44px;
+  height: 100px;
+  width: 100px;
+  border: solid 2px black;
+  vertical-align: middle;
+  text-align: center;
+}
