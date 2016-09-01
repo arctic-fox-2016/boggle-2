@@ -7,6 +7,16 @@
   </head>
   <body>
     <h1>Let's create your boggle game</h1>
+    Size<input id="baris" type="textbox" size=3> x <input id="kolom" type="textbox" size=3>
+    <input type="button" value="Generate Table" onclick="shake()">
+
+    <div id="tabelDiv"></div>
+
+    <input id="cariKata" type="textbox" size=30>
+    <input type="button" value="Cari" onclick="cariKataIni()">
+
+    <div id="hasil"></div>
+
     <script type="text/javascript" src="boggle.js"></script>
   </body>
 </html>
