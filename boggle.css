@@ -1,1 +1,31 @@
 /*write your css here*/
+#boggle{
+  padding:20px;
+}
+#boggle #boggle-table{
+  margin-top:50px;
+}
+#boggle #boggle-table td{
+  border:1px solid #ccc;
+  cursor:pointer;
+  font-size:30px;
+  font-weight:bold;
+  padding:20px;
+  text-align:center;
+}
+#boggle #boggle-table td:hover,
+#boggle #boggle-table td:focus,
+#boggle #boggle-table td.active{
+  background:#d9edf7
+}
+/*
+#boggle > .wrapper-outer{
+  display:table;
+  width:100%;
+  height:100%;
+}
+#boggle > .wrapper-outer > .wrapper-inner{
+  display:table-cell;
+  vertical-align:middle;
+}
+*/
