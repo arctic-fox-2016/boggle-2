@@ -3,10 +3,91 @@
   <head>
     <title>Boggle Game</title>
     <link media="screen" rel="stylesheet" type="text/css" href="boggle.css">
+    <script type="text/javascript" src="data.js"></script>
+
     <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function createCell(value) {
+      return "<td>" + value + "</td>"
+    }
+
+    function randomChar(){
+      var huruf = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+      return huruf[Math.floor(Math.random()* 26)]
+
+    }
+
+    function randomBoard() {
+      var x,y;
+      var myTable, isi;
+
+      myTable = "<table>"
+      for (x = 0; x < parseInt($("#size_x").val()) ; x++ ) {
+        myTable += "<tr>"
+        myBoggle.isiBoard[x] = []
+        for (y = 0; y < parseInt($("#size_y").val()) ; y++) {
+          isi = randomChar();
+          myBoggle.isiBoard[x][y] = isi;
+          myTable += createCell(isi);
+        }
+        myTable += "</tr>"
+      }
+      myTable += "</table>"
+
+      $("#boggle-words").html(myTable);
+    }
+
+    $(document).ready(function(){
+      $("#shakebtn").click(function(){
+        var x,y;
+        var myTable, isi;
+
+        myTable = "<table>"
+        for (x = 0; x < parseInt($("#size_x").val()) ; x++ ) {
+          myTable += "<tr>"
+          myBoggle.isiBoard[x] = []
+          for (y = 0; y < parseInt($("#size_y").val()) ; y++) {
+            isi = randomChar();
+            myBoggle.isiBoard[x][y] = isi;
+            myTable += createCell(isi);
+          }
+          myTable += "</tr>"
+        }
+        myTable += "</table>"
+
+        $("#boggle-words").html(myTable);
+      });
+    });
+
+    $(document).ready(function(){
+      $("#shakebtn").click(function(){});
+    });
+
+    </script>
   </head>
   <body>
     <h1>Let's create your boggle game</h1>
     <script type="text/javascript" src="boggle.js"></script>
+
+
+    <div id="boggle-board">
+      <div id="boggle-header">
+        <span>Size</span><input type="text" id="size_x" value="4"> x <input type="text" id="size_y" value="4">
+        <button id="shakebtn" type="button">Shake</button><button id="solvebtn" type="button">Solve</button></span>
+
+      </div>
+      <div id="boggle-words"></div>
+    </div>
+
+    <script>
+    randomBoard();
+//    while (!myBoggle.wordIsFound()) {
+      myBoggle.findNextChar(2,2);
+
+//    }
+
+    </script>
   </body>
 </html>
